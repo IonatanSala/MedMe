@@ -1,0 +1,37 @@
+<ion-view>
+	<ion-content id="user-details-view" class="padding" scroll="false">
+		<!-- Insert logo here plz -->
+		<p style="text-align:center;">
+	        <img src="../../img/LogInLogo.png" alt="Logo">
+	    </p>
+
+		<div class="list pass-form">
+			<label class="item item-input item-icon-left">
+				<i class="icon ion-ios-email-outline"></i>
+				<input ng-model="user.email" type="email" placeholder="Email">
+			</label>
+		</div>
+		<div class="list list-inset pass-form ">
+			<label class="item item-input item-icon-left">
+				<i class="icon ion-ios-locked-outline"></i>
+				<input ng-model="user.password" type="password" placeholder="Password">
+			</label>
+		</div>
+
+		<!-- login user -->
+		<div ng-if="state.value" style="text-align:center;">
+			<button ng-click="loginUser(user)" class="button button-full button-positive">Login</button>
+			<a href="" style="text-decoration:none; color:#2A5B83;" ng-click="toggleAuth()">
+				Create an account?
+			</a>
+		</div>
+
+		<!-- create user -->
+		<div ng-if="!state.value" style="text-align:center;">
+			<button ng-click="createUser(user)" class="button button-full button-positive">Sign up</button>
+			<a href="" style="text-decoration:none; color:#2A5B83;" ng-click="toggleAuth()">
+				Already have an accout?
+			</a>
+		</div>	
+	</ion-content>
+</ion-view>

@@ -1,0 +1,45 @@
+<ion-view>
+	<ion-nav-title>
+		{{med.name}}
+	</ion-nav-title>
+	<ion-nav-buttons side="right">
+		<button class="button button-clear button-icon ion-close-round" ng-click = "deleteEntry()"></button>
+	</ion-nav-buttons>	
+	<ion-content class="padding">
+		<div class="row">
+			<div class="col col-offset-25">
+				<qrcode version="2" error-correction-level="M" href="mailto:" size="150" data="{{medID}}"></qrcode>
+			</div>
+		</div>
+		<ion-list>
+			<!--<ion-item ng-repeat="(key,field) in med">
+				<h2>{{(field | date: 'dd-MM-yyyy') || field}}</h2>
+				<p>{{key}}</p>
+			</ion-item>_-->
+			<ion-item>
+				<p>Name</p>
+				<h2>{{med.name}}</h2>
+			</ion-item>
+			<ion-item>
+				<p>Comment</p>
+				<h2>{{med.comment}}</h2>
+			</ion-item>
+			<ion-item>
+				<p>Emergency Contact</p>
+				<h2>{{med.emergency}}</h2>
+			</ion-item>
+			<ion-item>
+				<p>Start Date</p>
+				<h2>{{med.startDate | date:'dd MMMM yyyy'}}</h2>
+			</ion-item>
+			<ion-item>
+				<p>End Date</p>
+				<h2>{{med.endDate | date:'dd MMMM yyyy'}}</h2>
+			</ion-item>
+			<ion-item>
+				<p>Take at</p>
+				<h2>{{med.takeTime | date: "h:mm a"}}</h2>
+			</ion-item>
+		</ion-list>
+	</ion-content>
+</ion-view>

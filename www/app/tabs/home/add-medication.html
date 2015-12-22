@@ -1,0 +1,40 @@
+<ion-view view-title="Add Medication">
+	<ion-content>	
+		<div class="list">
+			<label class="item item-input item-floating-label">
+				<span class="input-label">Medication Name</span>
+				<input type="text" ng-model="medication.name" placeholder="{{medication.name || 'Medication Name'}}">
+			</label>
+			<label class="item item-input item-floating-label">
+				<span class="input-label">Emergency Contact</span>
+				<input type="tel" ng-model="medication.emergency" placeholder="{{medication.emergency || 'Emergency Contact'}}">
+			</label>
+			<ionic-datepicker input-obj="startDate">
+				<a class="item item-icon-right">
+				    <i class="icon ion-calendar"></i>
+				    {{medication.startDate || 'Select start date'| date:'dd - MMMM - yyyy'}}
+				</a>
+			</ionic-datepicker>
+			<ionic-datepicker input-obj="endDate">
+				<a class="item item-icon-right">
+					<i class="icon ion-calendar"></i>
+					{{medication.endDate || 'Select end date'| date:'dd - MMMM - yyyy'}}
+				</a>
+			</ionic-datepicker>
+			<ionic-timepicker input-obj="takeTime">
+  				<a class="item item-icon-right">
+  					<i class = "icon ion-clock"></i>
+   					<standard-time-meridian etime='medication.takeTime' ></standard-time-meridian>
+   					{{medication.takeTime || 'Select Time' | date:"h:mm a"}}
+
+  				</a>
+  				
+			</ionic-timepicker>
+			<label class="item item-input item-floating-label">
+				<textarea rows="5" ng-model="medication.comment" placeholder="Useful comments"></textarea>
+			</label>
+		</div>
+		<button class="button button-positive button-full" ng-click="saveMedication(medication)">Save medication</button>
+
+	</ion-content>
+</ion-view>

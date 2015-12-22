@@ -1,0 +1,36 @@
+#user-details-view {
+
+	background: linear-gradient(to bottom, rgba(33, 33, 33, 1), rgba(33, 33, 33, 1)), url('../../img/bg.jpeg') center center fixed;
+	background-repeat: no-repeat;
+	background-size: cover; 
+
+	padding-top: 10vh;
+	.row {
+
+		h4 {
+			color: white;
+			text-align: center;
+			font-weight: bold;
+			font-size: 2em;
+		}
+	}
+
+	.list.pass-form {
+		background: transparent !important;
+		color: white;
+		.item {
+			color: white;
+			background: transparent !important;
+			border: 0;
+			border-bottom: 1px solid white;
+			border-radius: 0;
+
+			input[type="email"], input[type="password"] {
+				text-align: center;
+				color: white;
+			}
+		}
+
+
+	}
+}

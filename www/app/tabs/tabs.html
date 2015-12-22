@@ -1,0 +1,34 @@
+<ion-nav-bar class="bar-positive">
+    <ion-nav-back-button>
+    </ion-nav-back-button>
+</ion-nav-bar>
+
+<ion-tabs class="tabs-icon-only tabs-positive" id="tabs-menu">
+
+    <!-- Generate QR Tab -->
+    <ion-tab icon-off="icon ion-home" icon-on="ion-home" ui-sref="tabs.home">
+        <ion-nav-view name="tab-home"></ion-nav-view>
+    </ion-tab>
+
+    <!-- User Profile Tab
+    <ion-tab icon-off="ion-person" icon-on="ion-person-add" ui-sref="tabs.profile">
+        <ion-nav-view name="tab-profile"></ion-nav-view>
+    </ion-tab> -->
+
+    <!-- Scanner Tab-->
+    <!-- ui-sref="tabs.scanner" -->
+    <ion-tab icon-off="ion-qr-scanner" icon-on="ion-aperture" ng-click="openScanner()">
+        <ion-nav-view name="tab-scanner"></ion-nav-view>
+    </ion-tab>
+
+    <!-- Transactions Tab
+    <ion-tab icon-off="ion-heart-broken" icon-on="ion-heart" ui-sref="tabs.heart">
+        <ion-nav-view name="tab-heart"></ion-nav-view>
+    </ion-tab> -->
+
+    <!-- Profile Tab -->
+    <ion-tab icon-off="ion-gear-a" icon-on="ion-gear-a" ui-sref="tabs.settings">
+        <ion-nav-view name="tab-settings"></ion-nav-view>
+    </ion-tab>
+
+</ion-tabs>

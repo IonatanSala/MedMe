@@ -1,0 +1,14 @@
+<ion-view view-title="Home">
+	<ion-nav-buttons side="right">
+		<button class="button button-clear button-icon ion-plus-round" ng-click="goAddMedicationState()"></button>
+	</ion-nav-buttons>	
+	<ion-content id="home-view">
+		<ion-list>
+			<a class="item item-icon-right" ng-repeat="(key, medication) in medications" ui-sref="tabs.med-details({medId:key})">
+				<i class="icon ion-ios-arrow-right"></i>
+				<h2>{{medication.name}}</h2>
+				<p>{{medication.comment}}</p>
+			</a>
+		</ion-list>
+	</ion-content>
+</ion-view>
